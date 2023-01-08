@@ -30,7 +30,15 @@ img {
   border-radius: 25px;
   border: none;
   outline: none;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
 }
+
+.button:hover {
+  background: linear-gradient(113.96deg, #fe9013 101.44%, #f9804b 1.49%);
+  transform: scale(1.1);
+}
+
 /* /global styles */
 /* header styles */
 header {
@@ -60,6 +68,12 @@ nav > .menu {
   margin-left: 3rem;
 }
 
+.menu > ul > li:hover,
+ul li:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
 ul li a {
   font-size: 0.8rem;
   color: #fff;
@@ -68,8 +82,10 @@ ul li a {
 
 ul.menu-items li:first-child a,
 ul li a:hover {
+  transition: all 0.2s ease-in-out;
   color: orange;
 }
+
 /* /header styles */
 /* main styles */
 main {
@@ -133,5 +149,146 @@ main {
 .fav-color {
   color: rgba(255, 238, 46, 1);
 }
-
 /* /main styles */
+/* backstage styles */
+.backstage {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.backstage-description {
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+  gap: 2rem;
+}
+
+.backstage-description__info {
+  height: 100%;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgba(51, 59, 65, 1);
+}
+
+.info-title > h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.info-title > p,
+.info-instruction > p {
+  font-size: 0.9rem;
+}
+
+.info-instruction > h4 {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.backstage-side-img {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 160px;
+}
+/* /backstage styles */
+/* animals */
+.animals {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.animals-div {
+  height: 100%;
+  padding: 10rem 8rem 0;
+  display: grid;
+  grid-template-columns: 1fr 90% 1fr;
+  place-items: center;
+  gap: 1rem;
+}
+
+.animals-div button img {
+  width: 1rem;
+}
+.prev-btn > button,
+.next-btn > button {
+  padding: 1.5rem 1.3rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+}
+.prev-btn > button:hover,
+.next-btn > button:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(113.96deg, #fe9013 101.44%, #f9804b 1.49%);
+}
+
+.animal-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #f9804b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card:hover .card-img > img {
+  transform: scale(1.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-footer {
+  background-color: rgba(9, 9, 9, 0.5);
+  color: #fff;
+}
+
+.animal-info > p:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.animal-info > p:nth-child(2) {
+  font-size: 0.8rem;
+}
+.animal-left-img,
+.animal-right-img {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+}
+.choose-btn {
+  margin: 5rem auto;
+}
+.animal-left-img {
+  left: 0;
+}
+.animal-right-img {
+  right: 0;
+  width: 300px;
+}
+
+/* /animals */
