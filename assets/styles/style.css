@@ -136,18 +136,15 @@ main {
   color: #fff;
 }
 
-.main-info > h1 {
-  text-transform: uppercase;
-}
-
-.main-info > h1 {
+.main-title {
   font-size: 5rem;
+  text-transform: uppercase;
   line-height: 4rem;
   margin-bottom: 2rem;
   position: relative;
 }
 
-.main-info > h1::after {
+.main-info > .main-title::after {
   content: "";
   display: block;
   position: absolute;
@@ -529,7 +526,7 @@ input::-webkit-inner-spin-button {
   width: 250px;
 }
 .choose-btn {
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 .animal-left-img {
   left: 0;
@@ -767,6 +764,10 @@ input::-webkit-inner-spin-button {
   padding: 3rem 10rem;
 }
 
+.footer-title {
+  display: none;
+}
+
 .subscribe,
 .footer-links,
 .footer-menu {
@@ -844,9 +845,21 @@ input::-webkit-inner-spin-button {
 
 /* Small desktop */
 @media only screen and (min-width: 20px) and (max-width: 425px) {
+  html {
+    font-size: 10px;
+  }
+
   header {
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     transition: all 0.3s ease-out;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    width: 5rem;
   }
 
   header.active {
@@ -862,7 +875,7 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
     width: 100%;
     position: absolute;
-    top: 83px;
+    top: 40px;
     left: 0;
     right: 0;
     background-color: #000000;
@@ -871,12 +884,13 @@ input::-webkit-inner-spin-button {
   }
 
   .menu.active {
-    height: 210px;
+    height: 140px;
   }
 
   .menu,
   .menu-items {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     margin: 0;
     gap: 0;
@@ -885,10 +899,196 @@ input::-webkit-inner-spin-button {
   .menu li {
     padding: 0.5rem 0;
   }
+
   .menu li a:hover {
     display: block;
     transform: translate(5px, 0);
     transition: all 0.2s ease-out;
+  }
+
+  .main {
+    padding-top: 4rem;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    bottom: 4rem;
+  }
+
+  .main-info > .main-title::after {
+    width: 8rem;
+    top: -1rem;
+    left: -1rem;
+  }
+
+  .backstage-description,
+  .footer-title {
+    display: block;
+    padding: 0;
+  }
+
+  .info-title > h2,
+  .info-instruction > h4 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+  .info-title > p {
+    font-size: 1rem;
+  }
+
+  .backstage-description__info {
+    width: 100%;
+  }
+
+  .info-description {
+    font-size: 2rem;
+  }
+
+  .animal-left-img,
+  .animal-right-img,
+  .leaf-img {
+    width: 50px;
+  }
+
+  .backstage-description__img,
+  .prev-btn > button,
+  .next-btn > button,
+  .backstage-side-img,
+  .pick-and-feed_card > p,
+  .how-it-works-cell__arrow,
+  .cards-slider,
+  .footer-logo,
+  .subscribe-form,
+  .social-media p {
+    display: none;
+  }
+
+  .how-it-works-cell__img > div {
+    width: 80px;
+  }
+
+  .how-it-works {
+    flex-direction: column;
+  }
+
+  .how-it-works-cell {
+    width: 100%;
+  }
+
+  .backstage-description,
+  .animals-div {
+    padding: 0;
+  }
+
+  .animals-div,
+  .testimonials,
+  .footer {
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+
+  .animal-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* .watch,
+  .choose-btn,
+  .feed-btn,
+  .leave-feedback,
+  .donate-btn {
+    left: 50%;
+    right: 0;
+    position: relative;
+    transform: translate(-50%);
+    width: 90%;
+    margin: 2rem 0;
+    display: block;
+  } */
+
+  .watch,
+  .choose-btn,
+  .feed-btn,
+  .leave-feedback,
+  .donate-btn {
+    display: block;
+    position: static;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .watch {
+    margin-top: 18rem;
+  }
+
+  .pick-and-feed,
+  .pick-and-feed_card {
+    padding: 0.5rem;
+  }
+
+  .pick-and-feed_card > h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .pick-and-feed_card > h5 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .testimonials-title {
+    margin: 1rem 0;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .donate-btn {
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+
+  .social-media,
+  .footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+    margin: 1rem 0;
   }
 }
 
