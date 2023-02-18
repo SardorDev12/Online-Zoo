@@ -106,7 +106,6 @@ ul.social-media li a:hover {
 /* main styles */
 main {
   width: 100%;
-  height: 100vh;
   position: relative;
 }
 
@@ -695,13 +694,13 @@ input::-webkit-inner-spin-button {
   border: 2px solid transparent;
 }
 
-.testimonial-card::-webkit-scrollbar {
-  background-color: red;
-  width: 5px;
+.read-more,
+.read-more > span {
+  display: none;
 }
 
-.testimonial-card::-webkit-scrollbar-thumb {
-  background-color: black;
+.read-more span.active {
+  display: block;
 }
 
 .testimonial-card-header,
@@ -845,83 +844,6 @@ input::-webkit-inner-spin-button {
 
 /* Small desktop */
 @media only screen and (min-width: 20px) and (max-width: 425px) {
-  html {
-    font-size: 10px;
-  }
-
-  header {
-    padding: 0.5rem 2rem;
-    transition: all 0.3s ease-out;
-  }
-
-  .container {
-    padding: 0 1rem;
-  }
-
-  .logo {
-    width: 5rem;
-  }
-
-  header.active {
-    height: auto;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
-  .menu {
-    height: 0;
-    overflow: hidden;
-    width: 100%;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    background-color: #000000;
-    transition: all 0.3s ease-out;
-    padding: 0 2rem;
-  }
-
-  .menu.active {
-    height: 140px;
-  }
-
-  .menu,
-  .menu-items {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0;
-    gap: 0;
-  }
-
-  .menu li {
-    padding: 0.5rem 0;
-  }
-
-  .menu li a:hover {
-    display: block;
-    transform: translate(5px, 0);
-    transition: all 0.2s ease-out;
-  }
-
-  .main {
-    padding-top: 4rem;
-  }
-
-  .main-title {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    bottom: 4rem;
-  }
-
-  .main-info > .main-title::after {
-    width: 8rem;
-    top: -1rem;
-    left: -1rem;
-  }
-
   .backstage-description,
   .footer-title {
     display: block;
@@ -998,20 +920,6 @@ input::-webkit-inner-spin-button {
     padding: 0;
     margin: 0;
   }
-
-  /* .watch,
-  .choose-btn,
-  .feed-btn,
-  .leave-feedback,
-  .donate-btn {
-    left: 50%;
-    right: 0;
-    position: relative;
-    transform: translate(-50%);
-    width: 90%;
-    margin: 2rem 0;
-    display: block;
-  } */
 
   .watch,
   .choose-btn,
@@ -1090,6 +998,188 @@ input::-webkit-inner-spin-button {
     font-size: 0.7rem;
     margin: 1rem 0;
   }
+
+  /* Global-Mobile */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Buttons */
+  .watch,
+  .choose-btn,
+  .feed-btn {
+    width: 100%;
+    display: block;
+    position: static;
+    margin: 1rem auto;
+  }
+  /* /Buttons */
+  /* /Global-Mobile */
+  /* Header-Mobile */
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .menu {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    transition: all 0.3s ease-out;
+    padding: 0 2rem;
+  }
+
+  .menu.active {
+    height: 210px;
+  }
+
+  .menu,
+  .menu-items {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    gap: 0;
+  }
+
+  .menu li {
+    padding: 0.5rem 0;
+  }
+  /* /Header-Mobile */
+  /* Main-Mobile */
+  .main {
+    padding-top: 4rem;
+  }
+
+  .bg-image {
+    position: static;
+    width: 100%;
+    height: 50vh;
+    z-index: -999;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    bottom: 2rem;
+    left: 1rem;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .main-info .main-title::after {
+    width: 8rem;
+    top: -1rem;
+    left: -1rem;
+    display: block;
+  }
+
+  /* Main-Mobile */
+  /* Backstage-Mobile */
+  .info-title > h2,
+  .info-instruction > h4 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  /* /Backstage-Mobile */
+  /* Animals-Mobile */
+  .animals {
+    padding: 2rem 0;
+  }
+  /* /Animals-Mobile */
+  /* Pick-and-Feed-Mobile */
+  .pick-and-feed {
+    padding: 0.5 0;
+  }
+
+  .pick-and-feed_card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+  }
+
+  .pick-and-feed_card > h1,
+  .pick-and-feed_card > h5 {
+    margin: 0;
+    padding: 2rem 0;
+  }
+  .pick-and-feed_card > h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    padding: 0 0.1rem;
+  }
+  .how-it-works-cell__title > p {
+    margin: 0;
+  }
+  /* /Pick-and-Feed-Mobile */
+
+  /* Testimonials-Mobile */
+  .testimonials-title {
+    margin: 1rem 0;
+  }
+
+  .testimonial-cards {
+    margin: 0;
+  }
+
+  .testimonial-card {
+    position: relative;
+    height: 150px;
+    transition: all 0.3s ease-out;
+  }
+
+  .testimonial-card.active {
+    height: auto;
+  }
+
+  .testimonial-card-content {
+    margin-bottom: 1rem;
+  }
+
+  .read-more {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    gap: 0.2rem;
+  }
+
+  .leave-feedback {
+    width: 70%;
+  }
+
+  .leaf-img {
+    width: 70px;
+    bottom: -5rem;
+    right: 0;
+  }
+  /* Testimonials-Mobile */
+  /* Footer-Mobile */
+  .footer-title {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .footer-menu,
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+  }
+  /* Footer-Mobile */
 }
 
 /* /Small desktop */
