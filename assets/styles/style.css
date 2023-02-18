@@ -13,6 +13,8 @@ li {
 
 a {
   text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
 }
 
 img {
@@ -59,40 +61,27 @@ header {
   z-index: 999;
 }
 
-header nav,
-nav:nth-child(1) ul {
-  width: 100%;
+.nav,
+.menu,
+.menu-items {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav > .menu {
-  display: flex;
+
+.menu {
+  width: 100%;
 }
 
-.logo {
-  width: 80px;
-}
-
-.menu > ul > li {
-  margin-left: 3rem;
-}
-
-.menu > ul > li:hover,
-ul li:hover {
-  transition: all 0.2s ease-in-out;
-}
-
-ul li a {
-  font-size: 0.8rem;
-  color: #fff;
-  text-transform: capitalize;
-}
-
-ul.menu-items li.main-page a,
-ul li a:hover {
+.menu a:hover,
+.menu-items > li.main-page > a {
   transition: all 0.2s ease-in-out;
   color: orange;
+}
+
+.menu-items {
+  margin-left: 4rem;
+  gap: 2rem;
 }
 
 ul.menu-items li.donate-page a {
@@ -104,6 +93,13 @@ ul.social-media li.donate-page a,
 ul.social-media li a:hover {
   transition: all 0.2s ease-in-out;
   color: lightskyblue;
+}
+
+.burger-menu {
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
 }
 
 /* /header styles */
@@ -844,5 +840,56 @@ input::-webkit-inner-spin-button {
 .footer-menu > li {
   margin: 0 1rem;
 }
-
 /* /footer*/
+
+/* Small desktop */
+@media only screen and (min-width: 20px) and (max-width: 425px) {
+  header {
+    padding: 1rem 2rem;
+    transition: all 0.3s ease-out;
+  }
+
+  header.active {
+    height: auto;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .menu {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 83px;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    transition: all 0.3s ease-out;
+    padding: 0 2rem;
+  }
+
+  .menu.active {
+    height: 210px;
+  }
+
+  .menu,
+  .menu-items {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    gap: 0;
+  }
+
+  .menu li {
+    padding: 0.5rem 0;
+  }
+  .menu li a:hover {
+    display: block;
+    transform: translate(5px, 0);
+    transition: all 0.2s ease-out;
+  }
+}
+
+/* /Small desktop */
