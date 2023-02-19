@@ -946,6 +946,10 @@ input::-webkit-inner-spin-button {
 
   /* Main-Mobile */
   /* Backstage-Mobile */
+
+  .backstage {
+    overflow: hidden;
+  }
   .info-title > h2,
   .info-instruction > h4 {
     font-size: 1.5rem;
@@ -969,8 +973,8 @@ input::-webkit-inner-spin-button {
 
   .backstage-side-img {
     width: 50px;
-    right: -1.5rem;
-    top: -1.5rem;
+    top: -0.5em;
+    transform: translateX(1.5rem);
   }
   /* /Backstage-Mobile */
   /* Animals-Mobile */
