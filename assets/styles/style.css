@@ -842,7 +842,7 @@ input::-webkit-inner-spin-button {
 }
 /* /footer*/
 
-/* Small desktop */
+/* Mobile */
 @media only screen and (min-width: 20px) and (max-width: 425px) {
   /* Global-Mobile */
   .container {
@@ -1125,5 +1125,201 @@ input::-webkit-inner-spin-button {
   }
   /* Footer-Mobile */
 }
+/* /Mobile */
+/* Tablet */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  /* Global-Tablet */
+  .backstage-description__img,
+  .prev-btn > button,
+  .next-btn > button {
+    display: none;
+  }
+  /* /Global-Tablet */
+  /* Header-Tablet */
+  header {
+    padding: 0.5rem 1rem;
+  }
 
-/* /Small desktop */
+  .burger-menu {
+    display: block;
+  }
+
+  .menu {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    transition: all 0.3s ease-out;
+    padding: 0 2rem;
+  }
+
+  .menu.active {
+    height: 210px;
+  }
+
+  .menu,
+  .menu-items {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    gap: 0;
+  }
+
+  .menu li {
+    padding: 0.5rem 0;
+  }
+  /* /Header-Tablet */
+  /* Main-Tablet */
+  .main {
+    padding-top: 4rem;
+    height: auto;
+  }
+
+  .bg-image {
+    position: static;
+    width: 100%;
+    height: 80vh;
+    z-index: -999;
+  }
+
+  .main-title {
+    font-size: 4rem;
+    line-height: 3rem;
+    bottom: 1rem;
+    left: 4rem;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .main-info .main-title::after {
+    width: 18rem;
+    top: -2.5rem;
+    left: -2.5rem;
+    display: block;
+  }
+
+  .watch {
+    left: 2rem;
+    bottom: 1.5rem;
+    width: 350px;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+  /* Main-Tablet */
+
+  /* Backstage-Tablet */
+
+  .backstage {
+    overflow: hidden;
+    padding: 0 2rem;
+  }
+  .info-title > h2,
+  .info-instruction > h4 {
+    font-size: 3.5rem;
+    margin: 3rem 0 2rem;
+    font-weight: normal;
+    padding: 0;
+  }
+
+  .info-instruction > h4 {
+    font-size: 2rem;
+  }
+
+  .info-instruction > p {
+    font-size: 1.4rem;
+  }
+
+  .backstage-description {
+    display: block;
+    padding: 0;
+  }
+
+  .backstage-description__info {
+    width: 80%;
+  }
+
+  .info-title > p {
+    font-size: 1.5rem;
+  }
+
+  .backstage-side-img {
+    width: 180px;
+    top: 0rem;
+    transform: translateX(1.5rem);
+  }
+  /* /Backstage-Tablet */
+  /* Animals-Tablet */
+  .animals {
+    padding: 2rem;
+  }
+
+  .animals-div {
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+
+  .animal-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    gap: 1rem;
+  }
+
+  .choose-btn {
+    width: 350px;
+    font-size: 1rem;
+    margin: 5rem auto;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .animal-left-img,
+  .animal-right-img {
+    width: 200px;
+  }
+  /* /Animals-Tablet */
+  /* Pick-and-Feed-Tablet */
+  .pick-and-feed {
+    padding: 1.5rem 0;
+  }
+
+  .pick-and-feed_card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .pick-and-feed_card > h1,
+  .pick-and-feed_card > h5 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 2rem 0;
+  }
+  .pick-and-feed_card > h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    padding: 0 0.1rem;
+  }
+
+  .how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .how-it-works-cell__title > p {
+    margin: 0;
+  }
+  /* /Pick-and-Feed-Tablet */
+}
+/* Tablet */
