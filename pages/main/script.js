@@ -3,6 +3,7 @@ const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menu li");
 const readMores = document.querySelectorAll(".read-more");
 const testimonials = document.querySelectorAll(".testimonial-card");
+const slider = document.querySelector(".testimonial-cards");
 const mores = document.querySelectorAll(".more");
 const lesss = document.querySelectorAll(".less");
 
@@ -15,25 +16,6 @@ menuItems.forEach((item) => {
     menu.classList.remove("active");
   });
 });
-
-// readMore.forEach((item, key) => {
-//   item.addEventListener("click", () => {
-//     testimonial.forEach((testimonial) => {
-//       if (testimonial != item) {
-//         testimonial[key].classList.remove("active");
-//       }
-//     });
-
-//     // testimonial[key].classList.toggle("active");
-//     if (more[key].classList.contains("active")) {
-//       more[key].classList.remove("active");
-//       less[key].classList.add("active");
-//     } else {
-//       more[key].classList.add("active");
-//       less[key].classList.remove("active");
-//     }
-//   });
-// });
 
 testimonials.forEach((testimonial) => {
   const btn = testimonial.querySelector(".read-more");
@@ -61,4 +43,33 @@ testimonials.forEach((testimonial) => {
       }
     });
   });
+});
+
+// Testimonial slider
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) {
+    return;
+  }
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = x - startX;
+  slider.scrollLeft = scrollLeft - walk;
 });

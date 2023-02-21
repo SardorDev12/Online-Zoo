@@ -86,6 +86,10 @@ ul.menu-items li.donate-page a {
   transition: all 0.2s ease-in-out;
   color: orange;
 }
+ul.menu-items.footer-menu li a:hover {
+  transition: all 0.2s ease-in-out;
+  color: orange;
+}
 
 ul.social-media li.donate-page a,
 ul.social-media li a:hover {
@@ -739,6 +743,11 @@ input::-webkit-inner-spin-button {
   height: 100%;
   border-radius: 10px;
   background-color: #fe9013;
+}
+
+.drag-slider.active {
+  background-color: lightcoral;
+  cursor: grabbing;
 }
 
 .button-2 {
@@ -1438,3 +1447,181 @@ input::-webkit-inner-spin-button {
   /* Footer-Tablet */
 }
 /* Tablet */
+/* Small Desktop */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Header-Small-Desktop */
+  header {
+    padding: 1rem;
+  }
+  /* /Header-Small-Desktop */
+  /* Main-Small-Desktop */
+  .bg-image {
+    width: 100%;
+    height: 100vh;
+    z-index: -999;
+  }
+
+  .main-title {
+    bottom: 1.5rem;
+    left: 3.5rem;
+  }
+
+  .main-info .main-title::after {
+    left: -2rem;
+  }
+
+  .watch {
+    right: 8rem;
+    width: 250px;
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  /* /Main-Small-Desktop */
+  /* Backstage-Small-Desktop */
+  .backstage-description {
+    padding: 3rem 2rem;
+    margin: 0;
+  }
+  .backstage-side-img {
+    display: none;
+  }
+  /* /Backstage-Small-Desktop */
+  /* Animals-Small-Desktop */
+  .prev-btn,
+  .next-btn {
+    display: none;
+  }
+  .animals-div {
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+  .animal-cards {
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0;
+  }
+  .animal-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 1rem;
+  }
+
+  .choose-btn {
+    width: 350px;
+    font-size: 1rem;
+    margin: 5rem auto;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .animal-left-img,
+  .animal-right-img {
+    width: 200px;
+  }
+  /* /Animals-Small-Desktop */
+
+  /* Pick-and-Feed-Small-Desktop */
+  .pick-and-feed {
+    padding: 1.5rem 2rem;
+  }
+
+  .pick-and-feed_card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .pick-and-feed_card > h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .pick-and-feed_card > h5 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    text-align: start;
+  }
+
+  .pick-and-feed_card > p:nth-child(3),
+  .pick-and-feed_card > p:nth-child(4) {
+    font-size: 1.2rem;
+    text-align: start;
+  }
+
+  .how-it-works {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .how-it-works-cell__title > p {
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .feed-btn {
+    width: 350px;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+  /* /Pick-and-Feed-Small-Desktop */
+  /* Testimonials-Small-Desktop */
+  .testimonials {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  .testimonial-cards {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .testimonial-cards::-webkit-scrollbar {
+    height: 5px;
+  }
+  .testimonial-cards::-webkit-scrollbar-track {
+    background: #fe9013;
+  }
+  .testimonial-cards::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 10px;
+  }
+  .testimonial-cards::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: grab;
+  }
+  .testimonial-cards::-webkit-scrollbar-thumb:focus {
+    cursor: grabbing;
+  }
+
+  .testimonial-card {
+    flex-basis: 32%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .cards-slider {
+    display: none;
+  }
+
+  .leave-feedback {
+    width: 350px;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    margin: 2rem 0;
+  }
+  /* /Testimonials-Small-Desktop */
+  /* Footer-Small-Desktop */
+  .footer {
+    padding: 2rem;
+  }
+  /* /Footer-Small-Desktop */
+}
+/* /Small Desktop */
