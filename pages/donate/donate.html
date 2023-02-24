@@ -25,33 +25,36 @@
     <header class="header" id="header">
       <div class="container">
         <nav class="nav">
+          <div class="logo">
+            <a href="">
+              <img src="../../assets/images/logo_footer.png" alt="logo" />
+            </a>
+          </div>
+          <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
           <div class="menu">
-            <div class="logo">
-              <a href="../main/index.html">
-                <img src="../../assets/images/logo_footer.png" alt="logo" />
-              </a>
-            </div>
             <ul class="menu-items">
-              <li class="menu-item">
+              <li class="menu-item main-page">
                 <a href="#backstage">about</a>
               </li>
               <li class="menu-item"><a href="#">maps</a></li>
               <li class="menu-item"><a href="#animals">zoos</a></li>
-              <li class="menu-item donate-page">
-                <a href="#pick-and-feed">donate</a>
+              <li class="menu-item">
+                <a href="../donate/donate.html">donate</a>
               </li>
               <li class="menu-item"><a href="#footer">contact us</a></li>
             </ul>
-          </div>
-          <div class="author">
-            <ul>
-              <li>
-                <a
-                  href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks?node-id=0%3A1&t=CRDoUsyarR3qfNom-0"
-                  >designed by &#169;</a
-                >
-              </li>
-            </ul>
+            <div class="author">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks?node-id=0%3A1&t=CRDoUsyarR3qfNom-0"
+                    >designed by &#169;</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
@@ -102,8 +105,8 @@
               <div class="line"></div>
               <div class="price-dots">
                 <div class="price-dot">
-                  <span></span>
-                  <p>$5000</p>
+                  <span class="price-dot__item"></span>
+                  <p class="price-dot__item">$5000</p>
                 </div>
                 <div class="price-dot">
                   <span></span>
@@ -164,6 +167,7 @@
     <footer class="footer" id="footer">
       <div class="subscribe">
         <div class="footer-logo">
+          <h2 class="footer-title">PetStory Online</h2>
           <a href="#">
             <img src="../../assets/images/logo_footer.png" alt="logo footer" />
           </a>
@@ -178,6 +182,7 @@
           </div>
         </form>
       </div>
+      <div class="footer-title">PetStory Online</div>
       <button class="donate-btn button button-2">donate for volunteers</button>
       <div class="footer-links">
         <ul class="social-media">
@@ -186,7 +191,7 @@
               <div class="social-media-item__icon">
                 <i class="fa-brands fa-facebook-f"></i>
               </div>
-              Facebook
+              <p>Facebook</p>
             </a>
           </li>
           <li class="social-media-item">
@@ -194,7 +199,7 @@
               <div class="social-media-item__icon">
                 <i class="fa-brands fa-twitter"></i>
               </div>
-              Twitter
+              <p>Twitter</p>
             </a>
           </li>
           <li class="social-media-item">
@@ -202,7 +207,7 @@
               <div class="social-media-item__icon">
                 <i class="fa-brands fa-instagram"></i>
               </div>
-              Instagram
+              <p>Instagram</p>
             </a>
           </li>
           <li class="social-media-item">
@@ -210,7 +215,7 @@
               <div class="social-media-item__icon">
                 <i class="fa-brands fa-youtube"></i>
               </div>
-              Youtube
+              <p>Youtube</p>
             </a>
           </li>
         </ul>

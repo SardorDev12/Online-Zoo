@@ -215,6 +215,7 @@ main {
 .donate-info__paragraph {
   font-weight: 400;
   font-size: 0.86rem;
+  line-height: 1.5rem;
   color: #fff;
 }
 
@@ -308,6 +309,7 @@ main {
   border-radius: 50%;
   background-color: yellow;
   z-index: 1;
+  cursor: pointer;
 }
 
 .price-dots p {
@@ -315,6 +317,7 @@ main {
   font-weight: 600;
   font-size: 1.2rem;
   top: 3rem;
+  cursor: pointer;
 }
 
 .donation-form {
@@ -1131,6 +1134,45 @@ input::-webkit-inner-spin-button {
     margin: 1rem 0;
   }
   /* Footer-Mobile */
+  /* Donation-Pagr-Mobile */
+
+  .donate-main {
+    height: 60vh;
+  }
+  .donate-info {
+    padding: 0;
+    margin: 0;
+  }
+
+  .donate-info__motto {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .donate-info__card {
+    padding: 0.5rem;
+  }
+
+  .donate-info__title,
+  .donate-info__card-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .donate-info__card-description,
+  .donate-info__card-icon__title > p:nth-child(2) {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .price-dots > div:nth-child(-n + 3) {
+    display: none;
+  }
+
+  .donate-feed-btn {
+    width: 100%;
+  }
+  /* /Donation-Pagr-Mobile */
 }
 /* /Mobile */
 /* Tablet */
@@ -1444,7 +1486,22 @@ input::-webkit-inner-spin-button {
     font-weight: 300;
     line-height: 1.5rem;
   }
+
   /* Footer-Tablet */
+  /* Donation-Page-Tablet */
+
+  .donate-main {
+    height: 450px;
+  }
+
+  .donate-info {
+    padding: 2rem;
+  }
+
+  .price-dots > div:nth-child(-n + 3) {
+    display: none;
+  }
+  /* /Donation-Page-Tablet */
 }
 /* Tablet */
 /* Small Desktop */
@@ -1623,5 +1680,18 @@ input::-webkit-inner-spin-button {
     padding: 2rem;
   }
   /* /Footer-Small-Desktop */
+  /* Donate-Page-Small-Desktop */
+  .donate-main {
+    height: 390px;
+  }
+
+  .donate-info {
+    padding: 2rem;
+  }
+
+  .price-dots > div:nth-child(1) {
+    display: none;
+  }
+  /* /Donate-Page-Small-Desktop */
 }
 /* /Small Desktop */
